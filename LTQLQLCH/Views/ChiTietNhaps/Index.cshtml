@@ -1,0 +1,64 @@
+﻿@model IEnumerable<LTQLQLCH.Models.ChiTietNhap>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.STT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HangHoa.TenHH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhieuNhap.NhaCC_MaNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayNhap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaNCC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <th>
+        @Html.DisplayFor(modelItem => item.STT)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.HangHoa.TenHH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PhieuNhap.NhaCC_MaNCC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoLuong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayNhap)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaNCC)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.STT }) |
+        @Html.ActionLink("Details", "Details", new { id = item.STT }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.STT })
+    </td>
+</tr>
+}
+
+</table>

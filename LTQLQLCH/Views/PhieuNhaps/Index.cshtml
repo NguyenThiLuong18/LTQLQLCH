@@ -1,0 +1,46 @@
+﻿@model IEnumerable<LTQLQLCH.Models.PhieuNhap>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaPN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhaCC.MaNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <th>
+        @Html.DisplayFor(modelItem => item.MaPN)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.NhaCC.MaNCC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayTao)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaPN }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaPN }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaPN })
+    </td>
+</tr>
+}
+
+</table>

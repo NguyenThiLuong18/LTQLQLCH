@@ -1,0 +1,46 @@
+﻿@model IEnumerable<LTQLQLCH.Models.NhaCC>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <th>
+        @Html.DisplayFor(modelItem => item.MaNCC)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenNCC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SDT)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaNCC }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaNCC }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaNCC })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,59 @@
+﻿@model LTQLQLCH.Models.ChiTietNhap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ChiTietNhap</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HangHoa.TenHH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HangHoa.TenHH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhieuNhap.NhaCC_MaNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhieuNhap.NhaCC_MaNCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNCC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.STT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

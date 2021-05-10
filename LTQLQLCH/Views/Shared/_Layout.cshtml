@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/ckeditor")
+</head>
+<br />
+<br />
+<br />
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    
+                    <li>@Html.ActionLink("Khách Hàng", "Index", "KhachHangs")</li>
+                    <li>@Html.ActionLink("Hóa Đơn", "Index", "HoaDons")</li>
+                    <li>@Html.ActionLink("Hàng Hóa", "Index", "HangHoas")</li>
+                    <li>@Html.ActionLink("NhaCC", "Index", "NhaCCs")</li>
+                    <li>@Html.ActionLink("Phiếu Nhập", "Index", "PhieuNhaps")</li>
+                    <li>@Html.ActionLink("Chi Tiết Nhập", "Index", "ChiTietNhaps")</li>
+                    <li>@Html.ActionLink("Phiếu Xuất", "Index", "PhieuXuats")</li>
+                    <li>@Html.ActionLink("Chi Tiết Xuất", "Index", "ChiTietXuats")</li>
+                    <li>@Html.ActionLink("Đăng Kí", "DangKi", "TaiKhoans")</li>
+                    <li>@Html.ActionLink("Đăng Nhập", "DangNhap", "TaiKhoans")</li>
+                    <li>@Html.ActionLink("Đăng Xuất", "DangXuat", "TaiKhoans")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
