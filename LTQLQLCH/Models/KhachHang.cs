@@ -14,11 +14,11 @@ namespace LTQLQLCH.Models
         [Key]
      
         public string MaKH { get; set; }
-        [AllowHtml]
+        
 
         public string TenKH { get; set; }
 
-        
+        [AllowHtml]
         public string DiaChi { get; set; }
 
         public string SDT { get; set; }
